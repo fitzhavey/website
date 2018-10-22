@@ -1,0 +1,44 @@
+@import './reset.scss';
+
+// Colours
+$white: #ebeff0;
+$grey: #404d5a;
+$greyLight: #b9bec3;
+$orange: #ed6c52;
+$yellow: #eec215;
+
+// Layout
+$tablet: 768px;
+$desktop: 1140px;
+
+.inner {
+	width: 95%;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+
+	@media all and (min-width: $tablet) {
+		width: 90%;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+
+	@media all and (min-width: $desktop) {
+		width: 80%;
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+}
+
+// Defaults
+a {
+	color: $orange;
+
+	&:hover {
+		color: $yellow;
+	}
+}
+
+// Helpers
+.inline {
+	display: inline;
+}

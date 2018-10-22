@@ -1,18 +1,33 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+	<div class="Home inner">
+
+		<p>Full Stack developer based in London. Specialised in Node.js, Firebase & Vue.</p>
+
+		<img
+			class="Home__hero"
+			src="../assets/logo.svg"
+			alt="code image">
+
+		<p>I make things really <pre class="inline">fast</pre>, really <pre class="inline">well</pre>.</p>
+
+	</div>
 </template>
 
-<script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
+<style lang="scss">
 
-export default {
-  name: 'home',
-  components: {
-    HelloWorld,
-  },
-};
-</script>
+@import '../styles/index.scss';
+
+.Home {
+	text-align: left;
+	display: flex;
+	flex-wrap: wrap;
+
+	&__hero {
+		width: 80%;
+		margin: 0 10%;
+	}
+
+}
+
+</style>
+
