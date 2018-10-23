@@ -22,15 +22,33 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	min-height: calc(100vh - 3rem);
+	min-height: 100vh;
 
 	&__title {
 		font-size: 2rem;
+
+		@media all and (min-width: $tablet) {
+			font-size: 3rem;
+		}
+
+		@media all and (min-width: $desktop) {
+			font-size: 4rem;
+		}
 	}
 
 	&__hero {
 		width: 80%;
 		margin: 1rem 10%;
+
+		@media all and (min-width: $tablet) {
+			width: 70%;
+			margin: 2rem 15%;
+		}
+
+		@media all and (min-width: $desktop) {
+			width: 50%;
+			margin: 2rem 25%;
+		}
 	}
 
 }
