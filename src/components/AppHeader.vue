@@ -29,6 +29,7 @@
 	padding: 1rem 0;
 	display: flex;
 	position: fixed;
+	top: 0;
 
 	@media all and (min-width: $desktop) {
 		padding: 2rem 0;
