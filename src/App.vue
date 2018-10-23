@@ -33,6 +33,8 @@ export default {
 	text-align: center;
 	color: $white;
 	background: $grey;
+	position: absolute;
+	top: 0;
 }
 
 </style>
