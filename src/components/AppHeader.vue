@@ -5,7 +5,7 @@
 			class="Header__title"
 			to="/">
 			Michael&nbsp;
-			<span class="Header__title--light">- Developer</span>
+			<span class="Header__title--light">- Software Engineer</span>
 		</router-link>
 
 	</header>

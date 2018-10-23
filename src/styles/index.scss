@@ -32,13 +32,25 @@ $desktop: 1140px;
 // Defaults
 a {
 	color: $orange;
+	text-decoration: none;
 
 	&:hover {
 		color: $yellow;
 	}
 }
 
+p {
+	margin-bottom: 1rem;
+}
+
 // Helpers
 .inline {
 	display: inline;
+}
+
+.text-align-left {
+	text-align: left;
+}
+.text-align-right {
+	text-align: right;
 }
