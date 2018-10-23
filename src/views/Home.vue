@@ -8,7 +8,7 @@
 			src="../assets/logo.svg"
 			alt="code image">
 
-		<p>I make things really <pre class="inline">fast</pre>, really <pre class="inline">well</pre>.</p>
+		<p>I use agile development methods and cutting edge web technonology to deliver rapid results.</p>
 
 	</div>
 </template>
