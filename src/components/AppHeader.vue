@@ -8,6 +8,16 @@
 			<span class="Header__title--light">- Software Engineer</span>
 		</router-link>
 
+		<a
+			href="https://github.com/michaelfitzhavey"
+			title="Check me out on github!"
+			target="_blank">
+			<img
+				class="Header__icon"
+				src="../assets/icons/github.svg"
+				alt="github/michaelfitzhavey"/>
+		</a>
+
 	</header>
 </template>
 
@@ -39,5 +49,15 @@
 		}
 
 	}
+
+	&__icon {
+		width: 32px;
+		margin-top: -4px;
+
+		@media all and (min-width: $tablet) {
+			width: 48px;
+		}
+	}
+
 }
 </style>

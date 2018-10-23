@@ -37,6 +37,14 @@ a {
 	&:hover {
 		color: $yellow;
 	}
+
+	img {
+		transition: transform 200ms;
+
+		&:hover {
+			transform: rotate(30deg);
+		}
+	}
 }
 
 p {
