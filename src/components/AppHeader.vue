@@ -1,22 +1,26 @@
 <template>
-	<header class="Header inner">
+	<header class="Header">
 
-		<router-link
-			class="Header__title"
-			to="/">
-			Michael&nbsp;
-			<span class="Header__title--light">- Software Engineer</span>
-		</router-link>
+		<div class="inner">
 
-		<a
-			href="https://github.com/michaelfitzhavey"
-			title="Check me out on github!"
-			target="_blank">
-			<img
-				class="Header__icon"
-				src="../assets/icons/github.svg"
-				alt="github/michaelfitzhavey"/>
-		</a>
+			<router-link
+				class="Header__title"
+				to="/">
+				Michael&nbsp;
+				<span class="Header__title--light">- Software Engineer</span>
+			</router-link>
+
+			<a
+				href="https://github.com/michaelfitzhavey"
+				title="Check me out on github!"
+				target="_blank">
+				<img
+					class="Header__icon"
+					src="../assets/icons/github.svg"
+					alt="github/michaelfitzhavey"/>
+			</a>
+
+		</div>
 
 	</header>
 </template>
@@ -26,13 +30,15 @@
 @import '../styles/index.scss';
 
 .Header {
-	padding: 1rem 0;
-	display: flex;
 	position: fixed;
+	width: 100%;
 	top: 0;
+	background: $grey;
+	z-index: 2;
 
-	@media all and (min-width: $desktop) {
-		padding: 2rem 0;
+	.inner {
+		padding: 1rem 0 0 0;
+		display: flex;
 	}
 
 	&__title {
