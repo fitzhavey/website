@@ -1,7 +1,9 @@
 <template>
-	<header class="Header">
+	<header
+		class="Header"
+		:class="headerShadowClassName">
 
-		<div class="inner">
+		<div class="Header__inner">
 
 			<router-link
 				class="Header__title"
@@ -25,6 +27,35 @@
 	</header>
 </template>
 
+<script>
+export default {
+	data() {
+		return {
+			scrollDistance: null
+		};
+	},
+	computed: {
+		headerShadowClassName() {
+			if (this.scrollDistance > 10) return 'Header--shadow';
+			return '';
+		}
+	},
+	methods: {
+		updateScrollDistance() {
+			this.scrollDistance = window.scrollY;
+		}
+	},
+	mounted() {
+		window.addEventListener('scroll', this.updateScrollDistance);
+	},
+	destroyed() {
+		window.removeEventListener('scroll', this.updateScrollDistance);
+	}
+
+};
+</script>
+
+
 <style lang="scss">
 
 @import '../styles/index.scss';
@@ -35,8 +66,14 @@
 	top: 0;
 	background: $grey;
 	z-index: 2;
+	transition: box-shadow 200ms;
 
-	.inner {
+	&--shadow {
+		box-shadow: 0px 2px 5px rgba(0,0,0,0.5);
+	}
+
+	&__inner {
+		@extend .inner;
 		padding: 1rem 0 0 0;
 		display: flex;
 	}
