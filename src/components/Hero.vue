@@ -22,7 +22,9 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	height: 100vh;
+	$headerHeight: 50px;
+	margin-top: $headerHeight;
+	height: calc(100vh - #{$headerHeight});
 
 	@media all and (min-width: $desktop) {
 		$headerHeight: 80px;
@@ -30,7 +32,7 @@
 		height: calc(100vh - #{$headerHeight});
 	}
 
-	@media all and (max-height: 700px) {
+	@media all and (max-height: 500px) {
 		height: auto;
 	}
 
