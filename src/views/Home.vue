@@ -2,7 +2,7 @@
 	<section class="Home">
 
 		<hero/>
-		<work-experience/>
+		<!-- <work-experience/> -->
 
 	</section>
 </template>
