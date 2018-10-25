@@ -22,12 +22,16 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	min-height: 100vh;
+	height: 100vh;
 
 	@media all and (min-width: $desktop) {
 		$headerHeight: 80px;
 		margin-top: $headerHeight;
-		min-height: calc(100vh - #{$headerHeight});
+		height: calc(100vh - #{$headerHeight});
+	}
+
+	@media all and (max-height: 700px) {
+		height: auto;
 	}
 
 	&__title {
