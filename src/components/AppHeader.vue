@@ -1,38 +1,81 @@
 <template>
-	<header class="Header inner">
+	<header
+		class="Header"
+		:class="headerShadowClassName">
 
-		<router-link
-			class="Header__title"
-			to="/">
-			Michael&nbsp;
-			<span class="Header__title--light">- Software Engineer</span>
-		</router-link>
+		<div class="Header__inner">
 
-		<a
-			href="https://github.com/michaelfitzhavey"
-			title="Check me out on github!"
-			target="_blank">
-			<img
-				class="Header__icon"
-				src="../assets/icons/github.svg"
-				alt="github/michaelfitzhavey"/>
-		</a>
+			<router-link
+				class="Header__title"
+				to="/">
+				Michael&nbsp;
+				<span class="Header__title--light">- Software Engineer</span>
+			</router-link>
+
+			<a
+				href="https://github.com/michaelfitzhavey"
+				title="Check me out on github!"
+				target="_blank">
+				<img
+					class="Header__icon"
+					src="../assets/icons/github.svg"
+					alt="github/michaelfitzhavey"/>
+			</a>
+
+		</div>
 
 	</header>
 </template>
+
+<script>
+export default {
+	data() {
+		return {
+			scrollDistance: null
+		};
+	},
+	computed: {
+		headerShadowClassName() {
+			if (this.scrollDistance > 10) return 'Header--shadow';
+			return '';
+		}
+	},
+	methods: {
+		updateScrollDistance() {
+			this.scrollDistance = window.scrollY;
+		}
+	},
+	mounted() {
+		window.addEventListener('scroll', this.updateScrollDistance);
+	},
+	destroyed() {
+		window.removeEventListener('scroll', this.updateScrollDistance);
+	}
+
+};
+</script>
+
 
 <style lang="scss">
 
 @import '../styles/index.scss';
 
 .Header {
-	padding: 1rem 0;
-	display: flex;
 	position: fixed;
+	width: 100%;
 	top: 0;
+	background: $grey;
+	z-index: 2;
+	transition: box-shadow 200ms;
 
-	@media all and (min-width: $desktop) {
-		padding: 2rem 0;
+	&--shadow {
+		box-shadow: 0px 2px 5px rgba(0,0,0,0.5);
+	}
+
+	&__inner {
+		@extend .inner;
+		padding: 1rem 0 0 0;
+		display: flex;
 	}
 
 	&__title {
