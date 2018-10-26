@@ -1,35 +1,8 @@
-@import './reset.scss';
+@import './colours.scss';
+@import './layout.scss';
+@import './helper-classes.scss';
 
-// Colours
-$white: #ebeff0;
-$grey: #404d5a;
-$greyLight: #b9bec3;
-$orange: #ed6c52;
-$yellow: #eec215;
-
-// Layout
-$tablet: 768px;
-$desktop: 1024px;
-
-.inner {
-	width: 95%;
-	margin-left: 2.5%;
-	margin-right: 2.5%;
-
-	@media all and (min-width: $tablet) {
-		width: 90%;
-		margin-left: 5%;
-		margin-right: 5%;
-	}
-
-	@media all and (min-width: $desktop) {
-		width: 80%;
-		margin-left: 10%;
-		margin-right: 10%;
-	}
-}
-
-// Defaults
+/* Defaults */
 a {
 	color: $orange;
 	text-decoration: none;
@@ -47,28 +20,4 @@ a {
 	}
 }
 
-p {
-	margin-bottom: 1rem;
-	font-size: 1rem;
-	line-height: 1.4rem;
 
-	@media all and (min-width: $tablet) {
-		font-size: 1.2rem;
-	}
-
-	@media all and (min-width: $desktop) {
-		font-size: 1.4rem;
-	}
-}
-
-// Helpers
-.inline {
-	display: inline;
-}
-
-.text-align-left {
-	text-align: left;
-}
-.text-align-right {
-	text-align: right;
-}

@@ -2,19 +2,19 @@
 	<section class="Home">
 
 		<hero/>
-		<!-- <work-experience/> -->
+		<about-me/>
 
 	</section>
 </template>
 
 <script>
 import Hero from '@/components/Hero.vue';
-import WorkExperience from '@/components/WorkExperience.vue';
+import AboutMe from '@/components/AboutMe.vue';
 
 export default {
 	components: {
 		Hero,
-		WorkExperience
+		AboutMe
 	}
 };
 </script>
