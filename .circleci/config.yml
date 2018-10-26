@@ -36,7 +36,5 @@ jobs:
 
       # deploy to firebase if on master branch
       - run:
-          if [ "${CIRCLE_BRANCH}" == "master" ]; then
-            npm run deploy --only hosting --token "${FIREBASE_TOKEN}"
-          fi
+          npm run deploy --only hosting --token ${FIREBASE_TOKEN}
 
