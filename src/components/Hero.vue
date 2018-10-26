@@ -1,11 +1,11 @@
 <template>
 	<b-container class="Hero">
-		<pre class="Hero__title">Michael Fitzhavey</pre>
+		<kbd class="Hero__title ">Michael Fitzhavey</kbd>
 
 		<img
 			class="Hero__image"
 			src="../assets/images/logo.svg"
-			alt="code image">
+			alt="code image"/>
 
 		<section class="text-align-left">
 			<p class="Hero__text lead">Full Stack developer based in London. Specialising in Node.js, Firebase & Vue.</p>
@@ -38,26 +38,13 @@
 	&__title {
 		font-size: 1.4rem;
 		color: $white;
-
-		@media all and (min-width: $tablet) {
-			font-size: 3rem;
-		}
-
-		@media all and (min-width: $desktop) {
-			font-size: 4rem;
-		}
+		width: auto;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	&__text {
-		font-size: 1rem;
-
-		@media all and (min-width: $tablet) {
-			font-size: 1.25rem;
-		}
-
-		@media all and (min-width: $desktop) {
-			font-size: 1.5rem;
-		}
+		font-size: 1.2rem;
 	}
 
 	&__image {

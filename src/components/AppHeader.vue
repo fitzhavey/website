@@ -12,7 +12,7 @@
 				<span class="Header__title--light">- Software Engineer</span>
 			</router-link>
 
-			<a
+			<b-link
 				href="https://github.com/michaelfitzhavey"
 				title="Check me out on github!"
 				target="_blank">
@@ -20,7 +20,7 @@
 					class="Header__icon"
 					src="../assets/icons/github.svg"
 					alt="github/michaelfitzhavey"/>
-			</a>
+			</b-link>
 
 		</div>
 
@@ -81,10 +81,6 @@ export default {
 		@extend .inner;
 		padding: 1rem 0 0 0;
 		display: flex;
-
-		@media all and (min-width: $desktop) {
-			padding-top: 1.4rem;
-		}
 	}
 
 	&__title {
@@ -107,7 +103,7 @@ export default {
 		width: 32px;
 		margin-top: -4px;
 
-		@media all and (min-width: $tablet) {
+		@media all and (min-width: $desktop) {
 			width: 48px;
 			margin-top: -7px;
 		}
