@@ -4,11 +4,12 @@
 
 /* Defaults */
 a {
-	color: $orange;
+	color: $yellow;
 	text-decoration: none;
 
 	&:hover {
 		color: $yellow;
+		text-decoration-color: $orange;
 	}
 
 	img {

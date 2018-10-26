@@ -86,7 +86,10 @@ export default {
 	&__title {
 		font-weight: bold;
 		margin-right: auto;
-		color: $yellow !important;
+
+		&:hover {
+			text-decoration: none;
+		}
 
 		@media all and (min-width: $tablet) {
 			font-size: 1.5rem;
@@ -94,7 +97,7 @@ export default {
 
 		&--light {
 			font-weight: normal;
-			color: $orange !important;
+			color: $orange;
 		}
 
 	}
