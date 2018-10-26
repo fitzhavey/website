@@ -1,6 +1,6 @@
 <template>
 	<div class="AboutMe">
-		<b-container class="pt-3">
+		<b-container class="py-3">
 			<h1>About Me</h1>
 
 			<b-row class="pt-3">
