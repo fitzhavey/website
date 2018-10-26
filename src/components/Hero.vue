@@ -1,17 +1,17 @@
 <template>
-	<div class="Hero inner">
+	<b-container class="Hero">
 		<pre class="Hero__title">Michael Fitzhavey</pre>
 
 		<img
 			class="Hero__image"
-			src="../assets/logo.svg"
+			src="../assets/images/logo.svg"
 			alt="code image">
 
 		<section class="text-align-left">
-			<p>Full Stack developer based in London. Specialising in Node.js, Firebase & Vue.</p>
-			<p>I use agile development methods and cutting edge web technonology to deliver rapid results.</p>
+			<p class="Hero__text lead">Full Stack developer based in London. Specialising in Node.js, Firebase & Vue.</p>
+			<p class="Hero__text lead">I use agile development methods and cutting edge web technonology to deliver rapid results.</p>
 		</section>
-	</div>
+	</b-container>
 </template>
 
 <style lang="scss">
@@ -22,14 +22,13 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	$headerHeight: 50px;
 	margin-top: $headerHeight;
 	height: calc(100vh - #{$headerHeight});
 
 	@media all and (min-width: $desktop) {
-		$headerHeight: 80px;
-		margin-top: $headerHeight;
-		height: calc(100vh - #{$headerHeight});
+		$headerHeightDesktop: 63px;
+		margin-top: $headerHeightDesktop;
+		height: calc(100vh - #{$headerHeightDesktop});
 	}
 
 	@media all and (max-height: 500px) {
@@ -37,7 +36,8 @@
 	}
 
 	&__title {
-		font-size: 2rem;
+		font-size: 1.4rem;
+		color: $white;
 
 		@media all and (min-width: $tablet) {
 			font-size: 3rem;
@@ -48,18 +48,30 @@
 		}
 	}
 
-	&__image {
-		width: 80%;
-		margin: 1rem 10%;
+	&__text {
+		font-size: 1rem;
 
 		@media all and (min-width: $tablet) {
-			width: 70%;
-			margin: 2rem 15%;
+			font-size: 1.25rem;
 		}
 
 		@media all and (min-width: $desktop) {
+			font-size: 1.5rem;
+		}
+	}
+
+	&__image {
+		width: 60%;
+		margin: 1rem 20%;
+
+		@media all and (min-width: $tablet) {
 			width: 50%;
 			margin: 2rem 25%;
+		}
+
+		@media all and (min-width: $desktop) {
+			width: 30%;
+			margin: 2rem 35%;
 		}
 	}
 
