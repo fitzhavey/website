@@ -13,6 +13,7 @@ module.exports = {
 	indent: [1, 'tab'],
 	'no-tabs': 0,
 	'max-len': [1, 140],
+	"comma-dangle": [2, "never"]
   },
   parserOptions: {
     parser: 'babel-eslint',

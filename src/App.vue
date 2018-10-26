@@ -13,8 +13,8 @@ import AppHeader from '@/components/AppHeader.vue';
 
 export default {
 	components: {
-		AppHeader,
-	},
+		AppHeader
+	}
 };
 
 </script>
@@ -33,6 +33,8 @@ export default {
 	text-align: center;
 	color: $white;
 	background: $grey;
+	position: absolute;
+	top: 0;
 }
 
 </style>

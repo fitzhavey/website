@@ -1,33 +1,27 @@
 <template>
-	<div class="Home inner">
+	<section class="Home">
 
-		<p>Full Stack developer based in London. Specialised in Node.js, Firebase & Vue.</p>
+		<hero/>
+		<about-me/>
 
-		<img
-			class="Home__hero"
-			src="../assets/logo.svg"
-			alt="code image">
-
-		<p>I make things really <pre class="inline">fast</pre>, really <pre class="inline">well</pre>.</p>
-
-	</div>
+	</section>
 </template>
+
+<script>
+import Hero from '@/components/Hero.vue';
+import AboutMe from '@/components/AboutMe.vue';
+
+export default {
+	components: {
+		Hero,
+		AboutMe
+	}
+};
+</script>
+
 
 <style lang="scss">
 
-@import '../styles/index.scss';
-
-.Home {
-	text-align: left;
-	display: flex;
-	flex-wrap: wrap;
-
-	&__hero {
-		width: 80%;
-		margin: 0 10%;
-	}
-
-}
 
 </style>
 
