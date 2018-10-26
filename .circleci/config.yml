@@ -39,4 +39,3 @@ jobs:
           if [ "${CIRCLE_BRANCH}" == "master" ]; then
             npm run deploy --only hosting --token "${FIREBASE_TOKEN}"
           fi
-
