@@ -36,5 +36,5 @@ jobs:
 
       # deploy to firebase if on master branch
       - run:
-          npm run deploy --token ${FIREBASE_TOKEN}
+          vue-cli-service build && firebase deploy --only hosting --token ${FIREBASE_TOKEN}
 
