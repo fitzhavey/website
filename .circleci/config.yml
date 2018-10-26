@@ -5,9 +5,8 @@
 version: 2
 jobs:
   build:
-    filters:
-      branches:
-        only: master
+    branches:
+      only: master
     docker:
       # specify the version you desire here
       - image: circleci/node:8-stretch
@@ -38,6 +37,6 @@ jobs:
       # deploy to firebase if on master branch
       - run:
           if [ "${CIRCLE_BRANCH}" == "master" ]; then
-            npm run deploy --only hosting --token ${FIREBASE_TOKEN}
+            npm run deploy --only hosting --token "${FIREBASE_TOKEN}"
           fi
 
