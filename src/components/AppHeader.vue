@@ -14,8 +14,9 @@
 
 			<b-link
 				href="https://github.com/michaelfitzhavey"
+				target="_blank"
 				title="Check me out on github!"
-				target="_blank">
+				v-b-tooltip.hover>
 				<img
 					class="Header__icon"
 					src="../assets/icons/github.svg"
