@@ -14,8 +14,9 @@
 
 			<b-link
 				href="https://github.com/michaelfitzhavey"
+				target="_blank"
 				title="Check me out on github!"
-				target="_blank">
+				v-b-tooltip.hover>
 				<img
 					class="Header__icon"
 					src="../assets/icons/github.svg"
@@ -74,7 +75,7 @@ export default {
 	}
 
 	&--shadow {
-		box-shadow: 0px 2px 5px rgba(0,0,0,0.5);
+		box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
 	}
 
 	&__inner {
