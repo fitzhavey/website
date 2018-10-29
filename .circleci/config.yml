@@ -37,4 +37,3 @@ jobs:
       # deploy to firebase if on master branch
       - run:
           npm run deployCI
-
