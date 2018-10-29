@@ -36,4 +36,4 @@ jobs:
 
       # deploy to firebase if on master branch
       - run:
-          npm run deploy --only hosting --token ${FIREBASE_TOKEN}
+          npm run deployCI

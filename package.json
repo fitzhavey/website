@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "deploy": "vue-cli-service build && firebase deploy --only hosting"
+    "deploy": "vue-cli-service build && firebase deploy --only hosting",
+    "deployCI": "vue-cli-service build && firebase deploy --only hosting --token ${FIREBASE_TOKEN}"
   },
   "dependencies": {
     "bootstrap": "^4.1.3",
