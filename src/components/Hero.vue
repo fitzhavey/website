@@ -45,6 +45,7 @@
 
 	&__text {
 		font-size: 1.2rem;
+		text-align: center;
 	}
 
 	&__image {
